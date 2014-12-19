@@ -16,3 +16,4 @@ install:
 	cd songs-2.17; ./configure; make
 	cp songs-2.17/src/songidx/songidx .
 	rm -rf songs-2.17
+	make
