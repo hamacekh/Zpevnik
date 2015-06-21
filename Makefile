@@ -5,11 +5,18 @@ clean:
 	-rm tmp -rf
 
 ff:
-	mkdir tmp -p
-	TEXINPUTS="FF:" pdflatex -output-directory tmp FF/ff.tex
-	./songidx tmp/cbtitle.sxd tmp/cbtitle.sbx
-	TEXINPUTS="FF:" pdflatex -output-directory tmp FF/ff.tex
-	-mv tmp/ff.pdf FF.pdf
+	mkdir tmp/ff -p
+	TEXINPUTS="FF:" pdflatex -output-directory tmp/ff FF/ff.tex
+	./songidx tmp/ff/cbtitle.sxd tmp/ff/cbtitle.sbx
+	TEXINPUTS="FF:" pdflatex -output-directory tmp/ff FF/ff.tex
+	-mv tmp/ff/ff.pdf FF.pdf
+
+tabor:
+	mkdir tmp/tabor -p
+	TEXINPUTS="Tabor:" pdflatex -output-directory tmp/tabor Tabor/tabor.tex
+	./songidx tmp/tabor/cbtitle.sxd tmp/tabor/cbtitle.sbx
+	TEXINPUTS="Tabor:" pdflatex -output-directory tmp/tabor Tabor/tabor.tex
+	-mv tmp/tabor/tabor.pdf Tabor.pdf
 
 install:
 	tar -zxf songs-2.17.tar.gz
