@@ -1,5 +1,6 @@
 all:
 	make ff
+	make tabor
 
 clean:
 	-rm tmp -rf
