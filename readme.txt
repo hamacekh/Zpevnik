@@ -18,6 +18,7 @@ Write 'make clean' for erasing temporal files.
 Available songbooks
 --------------------
 'ff' - FF songbook in development
+'tabor' - songbook for Pikomat in development
 
 
 Instructions for Windows
