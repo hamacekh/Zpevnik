@@ -5,6 +5,15 @@ If you are new, please believe, that we are making it for absolutely no profit. 
 Instructions for Unix
 =====================
 
+Before installation
+-------------------
+You need following packages on $PATH of your system:
+pdflatex - latex pdf compiler
+lilypond-book - tool to compile lilypond tab files to tex
+
+pdflatex should is part of package texlive in most linux distributions.
+lilypond can be downloaded from http://lilypond.org/
+
 Installation
 ------------
 In terminal please write 'make install' which will install songs-2.17 into your folder and also compile all the songbooks.
