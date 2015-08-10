@@ -7,11 +7,12 @@ clean:
 
 ff:
 	mkdir tmp/ff -p
-	TEXINPUTS="FF:" pdflatex -output-directory tmp/ff FF/ff.tex
+	lilypond-book -I FF --output tmp/ff FF/ff.tex
+	cp songs.sty tmp/ff/songs.sty
+	cd tmp/ff;pdflatex ff.tex
 	./songidx tmp/ff/cbtitle.sxd tmp/ff/cbtitle.sbx
-	TEXINPUTS="FF:" pdflatex -output-directory tmp/ff FF/ff.tex
+	cd tmp/ff;pdflatex ff.tex
 	-mv tmp/ff/ff.pdf FF.pdf
-
 tabor:
 	mkdir tmp/tabor -p
 	TEXINPUTS="Tabor:" pdflatex -output-directory tmp/tabor Tabor/tabor.tex
