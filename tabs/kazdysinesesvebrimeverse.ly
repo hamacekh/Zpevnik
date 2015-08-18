@@ -1,4 +1,5 @@
 song = {
+    \time 3/4
     a, e b\3 cis' e b\3 e a, fis a\3 d'2
 }
 
