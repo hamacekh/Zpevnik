@@ -26,7 +26,7 @@ Instructions for Windows
 
 Installation
 ------------
-Download and install MiKTeX from http://miktex.org/download . If you already have MiKTeX or Tex Live, you can skip this.
+Download and install MiKTeX from http://miktex.org/download . It is necessary to restart windows after instalation. If you already have MiKTeX or Tex Live, you can skip this.
 
 Usage
 -----
