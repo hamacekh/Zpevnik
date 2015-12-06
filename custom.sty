@@ -1,0 +1,15 @@
+\def\linestobox#1\\#2@{
+\hbox{#1}%
+\ifx^#2^\else\linestobox#2@% pokud prazdny param 2, tak jdu do rekurze
+\fi
+}
+\def\rfloat#1{%
+\begingroup
+\vbox to 0pt{%
+\hfill
+\hbox{%
+\vbox{%
+\linestobox#1\\@}
+}}%
+\endgroup
+}
