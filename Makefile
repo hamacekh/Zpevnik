@@ -9,6 +9,7 @@ ff:
 	mkdir tmp/ff -p
 	lilypond-book -I FF --output tmp/ff FF/ff.tex
 	cp songs.sty tmp/ff/songs.sty
+	cp custom.sty tmp/ff/custom.sty
 	cd tmp/ff;pdflatex ff.tex
 	./songidx tmp/ff/cbtitle.sxd tmp/ff/cbtitle.sbx
 	cd tmp/ff;pdflatex ff.tex
