@@ -19,6 +19,12 @@ tabor:
 	TEXINPUTS="Tabor:" pdflatex -output-directory tmp/tabor Tabor/tabor.tex
 	-mv tmp/tabor/tabor.pdf Tabor.pdf
 
+watch:
+	watchy -w songs,FF,Tabor,songs.sty,custom.sty -- make
+
+watchff:
+	watchy -w songs,FF,songs.sty,custom.sty -- make
+
 install:
 	tar -zxf songs-2.17.tar.gz
 	cd songs-2.17; ./configure; make
