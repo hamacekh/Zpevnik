@@ -23,6 +23,11 @@ Usage
 In terminal write 'make' or 'make <name of the songbook>' to compile the demanded songbook.
 Write 'make clean' for erasing temporal files.
 
+Advanced usage
+--------------
+'make watch' watches for changes in project sources and executes 'make' on modify. This depends on watchy package https://github.com/caseywebdev/watchy
+'make watchff' watches only changes in FF songbook and executes 'make ff' on modify.
+
 
 Available songbooks
 --------------------
