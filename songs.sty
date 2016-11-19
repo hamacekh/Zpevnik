@@ -1352,6 +1352,49 @@
     \penalty12345 %
     \everyverse\relax%
 }
+\newcommand\beginplus{%
+  \begingroup%
+    \SB@loadactives%
+    \endgroup\vnumberedfalse\SB@beginplus%
+}
+
+\newcommand\SB@beginplus{%
+\ifSB@insong%
+    \ifSB@inverse\SB@errbvv\endverse\fi%
+    \ifSB@inchorus\SB@errbvc\endchorus\fi%
+  \else%
+    \SB@errbvt\beginsong{Unknown Song}%
+  \fi%
+  \ifrepchorus\ifvoid\SB@chorusbox\else%
+    \SB@gotchorustrue%
+    \ifSB@prevverse\ifvnumbered%
+      \marks\SB@cmarkclass{\SB@cmark}%
+    \fi\fi%
+  \fi\fi%
+  \SB@inversetrue%
+  \def\SB@closeall{\endverse\endsong}%
+  \SB@stanzabreak%
+  \versemark\nobreak%
+  \global\SB@stanzatrue%
+  \SB@ifempty\SB@cr@\memorize{\replay[]}%
+  \setbox\SB@box\vbox\bgroup\begingroup%
+      \def\SB@everypar{%
+        \setbox\SB@box\hbox{{\printrefnum{+}}}%
+        \ifdim\wd\SB@box<\versenumwidth%
+          \setbox\SB@box%
+          \hbox to\versenumwidth{\unhbox\SB@box\hfil}%
+        \fi%
+        \ifchorded\vrule\@height\baselineskip\@width\z@\@depth\z@\fi%
+        \placeversenum\SB@box%
+        \gdef\SB@everypar{}%
+      }%
+    \everypar{\SB@everypar\everypar{}}%
+    \versefont\versejustify%
+    \SB@loadactives%
+    \SB@obeylines%
+    \penalty12345 %
+    \everyverse\relax%
+}
 \newcommand\beginstar{%
   \begingroup%
     \SB@loadactives%
